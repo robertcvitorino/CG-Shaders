@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://ddgx74lq5u5ny"]
+
+[ext_resource type="Texture2D" uid="uid://ddax8wcni8ya7" path="res://Textures/rocky_trail_02_diff_4k.png" id="1_ygtrm"]
+[ext_resource type="Texture2D" uid="uid://cplnv5lwby2om" path="res://Textures/rocky_trail_02_nor_gl_4k.png" id="2_aa84v"]
+[ext_resource type="Texture2D" uid="uid://cobsows171atd" path="res://Textures/rocky_trail_02_ao_4k.jpg" id="3_4gamy"]
+
+[resource]
+albedo_texture = ExtResource("1_ygtrm")
+roughness_texture = ExtResource("3_4gamy")
+normal_enabled = true
+normal_texture = ExtResource("2_aa84v")

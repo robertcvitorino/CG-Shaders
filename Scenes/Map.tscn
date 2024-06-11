@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbv2my4o0e2xg"]
+
+[ext_resource type="Material" uid="uid://0xe8jgmfu61k" path="res://Shaders/new_shader_material.tres" id="1_yfwrp"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_enslm"]
+uv2_padding = 0.0
+size = Vector2(20, 20)
+subdivide_width = 10
+subdivide_depth = 10
+orientation = 1
+
+[node name="Map" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8297, 54.2334, 42.3725)
+mesh = SubResource("QuadMesh_enslm")
+surface_material_override/0 = ExtResource("1_yfwrp")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.686, 12.6986, -5.42)

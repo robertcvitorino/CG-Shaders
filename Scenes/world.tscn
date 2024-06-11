@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dijlr4v1yypw6"]
+
+[ext_resource type="Material" uid="uid://ddgx74lq5u5ny" path="res://Shaders/new_standard_material_3d.tres" id="1_pmmbv"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_62a3k"]
+size = Vector2(300, 300)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kofh0"]
+height = 1.925
+
+[node name="World" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_62a3k")
+surface_material_override/0 = ExtResource("1_pmmbv")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.8994, 0.871607, 2.20532)
+mesh = SubResource("CapsuleMesh_kofh0")

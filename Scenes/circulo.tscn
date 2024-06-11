@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d74ppjwhsisv"]
+
+[ext_resource type="Shader" path="res://Shaders/circulo.gdshader" id="1_1olre"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_xvp1v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jxfir"]
+render_priority = 0
+shader = ExtResource("1_1olre")
+shader_parameter/metallic = 0.0
+
+[node name="Circulo" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.477717, -0.291201, -0.331086)
+mesh = SubResource("SphereMesh_xvp1v")
+surface_material_override/0 = SubResource("ShaderMaterial_jxfir")

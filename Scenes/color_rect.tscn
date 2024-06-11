@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3pctnry4audt"]
+
+[ext_resource type="Shader" path="res://Shaders/color_rect.gdshader" id="1_bvdi1"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_3x0f2"]
+frequency = 0.5703
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_db8cg"]
+noise = SubResource("FastNoiseLite_3x0f2")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3wj8u"]
+shader = ExtResource("1_bvdi1")
+shader_parameter/resolution = Vector2(600, 400)
+shader_parameter/density = 20.0
+shader_parameter/speed_x = 20.0
+shader_parameter/speed_y = 0.0
+shader_parameter/layers = 5.0
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_db8cg")
+
+[node name="ColorRect" type="ColorRect"]
+material = SubResource("ShaderMaterial_3wj8u")
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 607.0
+offset_bottom = 403.0
